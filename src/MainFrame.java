@@ -19,7 +19,7 @@ public class MainFrame extends Frame{
     private void init(){
         this.setLayout(null);
         this.setBounds(100,100,500,300);
-        lab.setBounds(50,100,47,50);
+        lab.setBounds(225,100,47,50);
         lab.setBackground(new Color(255, 174, 191));
         btnStart.setBounds(100,250,100,30);
         btnExit.setBounds(200,250,100,30);
@@ -67,10 +67,10 @@ public class MainFrame extends Frame{
                     flag=true;
                 }
                 if(flag==true){
-                    lab.setLocation(lab.getX() + 50, lab.getY());
+                    lab.setLocation(lab.getX() + 25, lab.getY());
                     lab.setBackground(new Color(255, 174+lab.getX()/7, 191+lab.getX()/7));
                 }else{
-                    lab.setLocation(lab.getX() - 50, lab.getY());
+                    lab.setLocation(lab.getX() - 25, lab.getY());
                     lab.setBackground(new Color(255, 174+lab.getX()/7, 191+lab.getX()/7));
                 }
 
