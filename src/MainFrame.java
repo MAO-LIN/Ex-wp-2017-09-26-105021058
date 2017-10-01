@@ -17,6 +17,7 @@ public class MainFrame extends Frame{
         init();
     }
     private void init(){
+        this.setBackground(Color.black);
         this.setResizable(false);
         this.setLayout(null);
         this.setBounds(100,100,500,300);
