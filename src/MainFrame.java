@@ -7,8 +7,8 @@ import java.awt.event.WindowEvent;
 
 public class MainFrame extends Frame{
     private Button btnExit=new Button("Exit");
-    private Button btnStart=new Button("Add");
-    private Button btnStop=new Button("Sub");
+    private Button btnStart=new Button("Start");
+    private Button btnStop=new Button("Stop");
     private Label lab=new Label("(@w@)");
     private int count =0;
     private Timer t1;
@@ -17,6 +17,7 @@ public class MainFrame extends Frame{
         init();
     }
     private void init(){
+        this.setResizable(false);
         this.setLayout(null);
         this.setBounds(100,100,500,300);
         lab.setBounds(225,100,47,50);
@@ -61,6 +62,7 @@ public class MainFrame extends Frame{
         t1 =new Timer(200, new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
+                lab.setText(Integer.toString(lab.getX())+","+Integer.toString(lab.getY()));
                 if(lab.getX()>MainFrame.this.getWidth()-75){
                     flag=false;
                 }else if(lab.getX()<=0)  {
